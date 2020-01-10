@@ -7,33 +7,33 @@ public class AutoMoneySec : MonoBehaviour
 {
     public GameObject mpsDisplay;
     public Click click;
-    public UpgradeManager[] items;
+    public UpgradePerSec[] items;
 
     void Start() {
         StartCoroutine (AutoTick());
     }
 
     void Update() {
-        mpsDisplay.GetComponent<Text>().text = GetGoldPerSec() + " R$/seg";
+        mpsDisplay.GetComponent<Text>().text = GetMoneyPerSec() + " R$/sec";
     }
 
-    public float GetGoldPerSec() {
+    public float GetMoneyPerSec() {
         float tick = 0;
-        foreach (UpgradeManager item in items)
+        foreach (UpgradePerSec item in items)
         {
-            if(item.isSec == true)
-                tick += item.count * item.cost;
+            if(item.count > 0)
+                tick += item.count * item.moneySec;
         }
         return tick;
     }
 
-    public void AutoGoldPerSec() {
-        click.money += GetGoldPerSec() / 10;
+    public void AutoMoneyPerSec() {
+        click.money += GetMoneyPerSec() / 10;
     }
 
     IEnumerator AutoTick() {
         while (true) {
-            AutoGoldPerSec();
+            AutoMoneyPerSec();
             yield return new WaitForSeconds(0.10f);
         }
     }

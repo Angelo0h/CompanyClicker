@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Click : MonoBehaviour
 {
     public GameObject moneyPerClickDisplay;
-    public GameObject moneyPerSecDisplay;
     public GameObject moneyDisplay;
     public GameObject companyButton;
     public float money = 0f;
