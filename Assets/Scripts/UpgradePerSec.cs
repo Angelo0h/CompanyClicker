@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UpgradePerSec : MonoBehaviour
 {
+    public GameObject UpgradeButton;
     public GameObject upgradeSecInfo;
     public string upgradeName;
     public float cost;
@@ -14,23 +15,29 @@ public class UpgradePerSec : MonoBehaviour
 
     public Animator animator;
 
+    public Click click;
+
     void Start()
     {
         baseCost = cost;
     }
     void Update()
     {
-        upgradeSecInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + cost + "\n" + moneySec + " R$/Sec";
+        upgradeSecInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost) + "\n" + moneySec + " R$/Sec";
+        if (click.money >= cost)
+            UpgradeButton.GetComponent<Button>().interactable = true;
+         else
+            UpgradeButton.GetComponent<Button>().interactable = false;
     }
 
-    public void PurchaseUpgradeSec(Click click)
+    public void PurchaseUpgradeSec()
     {
         if (click.money >= cost)
         {
             click.money -= cost;
             click.moneyPerSec += moneySec;
             count++;
-            cost = Mathf.Round(baseCost * Mathf.Pow(1.80f, count));
+            cost = Mathf.Round(baseCost * Mathf.Pow(1.60f, count));
         } else
         {
             animator.SetTrigger("NoMoney");

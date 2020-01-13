@@ -14,8 +14,8 @@ public class Click : MonoBehaviour
 
     void Update()
     {
-        moneyDisplay.GetComponent<Text>().text = "R$ " + money;
-        moneyPerClickDisplay.GetComponent<Text>().text = moneyPerClick + " R$/click";
+        moneyDisplay.GetComponent<Text>().text = "R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(money);
+        moneyPerClickDisplay.GetComponent<Text>().text = CurrencyConverter.Instance.GetCurrencyIntoString(moneyPerClick) + " R$/click";
         
     }
     public void Clicked()

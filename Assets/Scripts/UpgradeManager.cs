@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public GameObject UpgradeButton;
     public GameObject upgradeInfo;
     public string upgradeName;
     public float cost;
@@ -14,6 +15,8 @@ public class UpgradeManager : MonoBehaviour
     private float baseCost;
     public Animator animator;
 
+    public Click click;
+
     void Start()
     {
         baseCost = cost;
@@ -21,9 +24,13 @@ public class UpgradeManager : MonoBehaviour
 
     void Update()
     {
-        upgradeInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + cost + "\n" + clickPower + " R$/Click";
+        upgradeInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost) + "\n" + clickPower + " R$/Click";
+        if (click.money >= cost)
+            UpgradeButton.GetComponent<Button>().interactable = true;
+         else
+            UpgradeButton.GetComponent<Button>().interactable = false;
     }
-    public void PurchaseUpgrade(Click click)
+    public void PurchaseUpgrade()
     {
         if (click.money >= cost)
         {

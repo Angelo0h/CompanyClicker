@@ -24,6 +24,11 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void Clicked()
+    {
+        Pause();
+    }
+
     public void Resume()
     {
         pauseMenuUI.gameObject.SetActive(false);

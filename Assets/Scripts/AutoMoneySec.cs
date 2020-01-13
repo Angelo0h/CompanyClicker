@@ -14,7 +14,7 @@ public class AutoMoneySec : MonoBehaviour
     }
 
     void Update() {
-        mpsDisplay.GetComponent<Text>().text = GetMoneyPerSec() + " R$/sec";
+        mpsDisplay.GetComponent<Text>().text = CurrencyConverter.Instance.GetCurrencyIntoString(GetMoneyPerSec()) + " R$/sec";
     }
 
     public float GetMoneyPerSec() {
