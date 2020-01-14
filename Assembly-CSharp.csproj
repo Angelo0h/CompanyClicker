@@ -46,13 +46,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AutoMoneySec.cs" />
+     <Compile Include="Assets\Scripts\BannerAdScript.cs" />
      <Compile Include="Assets\Scripts\Click.cs" />
      <Compile Include="Assets\Scripts\CurrencyConverter.cs" />
      <Compile Include="Assets\Scripts\MenuOptions.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\RewardedAdsButton.cs" />
      <Compile Include="Assets\Scripts\SettingsMenu.cs" />
      <Compile Include="Assets\Scripts\UpgradeManager.cs" />
      <Compile Include="Assets\Scripts\UpgradePerSec.cs" />
+     <Compile Include="Assets\Scripts\VideoAdScript.cs" />
      <None Include="Assets\UnityAds\link.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/jeanb/Desktop/AAGames/CompanyClicker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -2673,6 +2673,7 @@ GameObject:
   - component: {fileID: 1255406223}
   - component: {fileID: 1255406222}
   - component: {fileID: 1255406221}
+  - component: {fileID: 1255406224}
   m_Layer: 5
   m_Name: TimeTravelButton
   m_TagString: Untagged
@@ -2779,6 +2780,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255406219}
   m_CullTransparentMesh: 0
+--- !u!114 &1255406224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255406219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2dc521ccfa66c449f295b52551ebd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348781513
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3171,7 @@ GameObject:
   - component: {fileID: 1380930512}
   - component: {fileID: 1380930516}
   - component: {fileID: 1380930517}
+  - component: {fileID: 1380930518}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3244,6 +3258,7 @@ RectTransform:
   - {fileID: 816726451}
   - {fileID: 1255406220}
   - {fileID: 1899867908}
+  - {fileID: 1511282541}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3275,6 +3290,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a84cbebf4564c8f498f0e894eafd115c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1380930518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380930511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1ea13700a018b4b9dbd002f9b0f1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1382447040
@@ -3978,6 +4005,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497480367}
   m_CullTransparentMesh: 0
+--- !u!1 &1511282540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1511282541}
+  - component: {fileID: 1511282542}
+  m_Layer: 5
+  m_Name: BannerAd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1511282541
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511282540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1380930515}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1511282542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511282540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b00d9f74c05e440bbbb2cc718b2581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1614327085
 GameObject:
   m_ObjectHideFlags: 0
