@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class UpgradePerSec : MonoBehaviour
 {
@@ -12,9 +13,12 @@ public class UpgradePerSec : MonoBehaviour
     public int count;
     public int moneySec;
     private float baseCost;
+    public AudioSource cash;
 
     public Animator animator;
 
+    public Animator subCash;
+    public GameObject subCashText;
     public Click click;
 
     void Start()
@@ -25,8 +29,9 @@ public class UpgradePerSec : MonoBehaviour
     {
         upgradeSecInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost) + "\n" + moneySec + " R$/Sec";
         if (click.money >= cost)
+        {
             UpgradeButton.GetComponent<Button>().interactable = true;
-         else
+        } else
             UpgradeButton.GetComponent<Button>().interactable = false;
     }
 
@@ -34,6 +39,9 @@ public class UpgradePerSec : MonoBehaviour
     {
         if (click.money >= cost)
         {
+            subCashText.GetComponent<Text>().text = "- R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost);
+            subCash.SetTrigger("Buy");
+            cash.Play();
             click.money -= cost;
             click.moneyPerSec += moneySec;
             count++;

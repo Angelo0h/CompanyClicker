@@ -13,7 +13,11 @@ public class UpgradeManager : MonoBehaviour
     public int count;
     public int clickPower;
     private float baseCost;
+    public AudioSource cash;
     public Animator animator;
+
+    public Animator subCash;
+    public GameObject subCashText;
 
     public Click click;
 
@@ -26,14 +30,18 @@ public class UpgradeManager : MonoBehaviour
     {
         upgradeInfo.GetComponent<Text>().text = upgradeName + " (" + count + ")" + "\nValor: R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost) + "\n" + clickPower + " R$/Click";
         if (click.money >= cost)
+        {
             UpgradeButton.GetComponent<Button>().interactable = true;
-         else
+        } else
             UpgradeButton.GetComponent<Button>().interactable = false;
     }
     public void PurchaseUpgrade()
     {
         if (click.money >= cost)
         {
+            subCashText.GetComponent<Text>().text = "- R$ " + CurrencyConverter.Instance.GetCurrencyIntoString(cost);
+            subCash.SetTrigger("Buy");
+            cash.Play();
             click.money -= cost;
             click.moneyPerClick += clickPower;
             count++;

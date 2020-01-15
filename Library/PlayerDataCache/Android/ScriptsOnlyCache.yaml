@@ -5,10 +5,13 @@ ScriptsOnlyBuild:
     - BannerAdScript
     - Click
     - CurrencyConverter
-    - MenuOptions
+    - GlobalAchievements
     - PauseMenu
+    - Player
     - RewardedAdsButton
-    - SettingsMenu
+    - SaveManager
+    - SplashToGame
+    - UIManager
     - UpgradeManager
     - UpgradePerSec
     - VideoAdScript
@@ -21,8 +24,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -30,91 +35,16 @@ ScriptsOnlyBuild:
     UnityEngine.Advertisements.Editor.dll:
     - UnityEngine.Advertisements.Placeholder
     - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
-    UnityEngine.Monetization.Editor.dll:
-    - UnityEngine.Monetization.Placeholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Mask
-    - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
-    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/Scenes/MainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9734}
-    - Class: 114
-      Script: {instanceID: 9930}
-    - Class: 114
-      Script: {instanceID: 9932}
-    - Class: 114
-      Script: {instanceID: 9974}
-    - Class: 114
-      Script: {instanceID: 10184}
-    - Class: 114
-      Script: {instanceID: 10312}
-    - Class: 114
-      Script: {instanceID: 10412}
-    - Class: 114
-      Script: {instanceID: 10616}
-    - Class: 114
-      Script: {instanceID: 10868}
-    - Class: 114
-      Script: {instanceID: 11370}
-    - Class: 114
-      Script: {instanceID: 11388}
-    - Class: 114
-      Script: {instanceID: 11808}
-    - Class: 114
-      Script: {instanceID: 11822}
-    - Class: 114
-      Script: {instanceID: 11840}
-    - Class: 114
-      Script: {instanceID: 11860}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 241
-      Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
-      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -132,6 +62,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -139,42 +73,93 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9734}
+      Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9752}
     - Class: 114
-      Script: {instanceID: 9930}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9974}
+      Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 10034}
+      Script: {instanceID: 9952}
     - Class: 114
-      Script: {instanceID: 10412}
+      Script: {instanceID: 10004}
     - Class: 114
-      Script: {instanceID: 10868}
+      Script: {instanceID: 10362}
     - Class: 114
-      Script: {instanceID: 11180}
+      Script: {instanceID: 10518}
     - Class: 114
-      Script: {instanceID: 11388}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 10732}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 10774}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11074}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 11260}
     - Class: 114
-      Script: {instanceID: 11822}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11870}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11882}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 49824}
+      Script: {instanceID: 11652}
+    - Class: 114
+      Script: {instanceID: 11654}
+    - Class: 114
+      Script: {instanceID: 11698}
+    - Class: 114
+      Script: {instanceID: 11706}
+    - Class: 114
+      Script: {instanceID: 43060}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Splash.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9728}
+    - Class: 114
+      Script: {instanceID: 9952}
+    - Class: 114
+      Script: {instanceID: 10226}
+    - Class: 114
+      Script: {instanceID: 10362}
+    - Class: 114
+      Script: {instanceID: 11260}
+    - Class: 114
+      Script: {instanceID: 11654}
+    - Class: 115
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -199,6 +184,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveManager
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -345,7 +336,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: a40dda7956efd87ad2a33fa74b2e6f1b
+      Hash: d835e37be8caf473a0d64dc941f2a2a8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SettingsMenu
@@ -361,6 +352,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SplashToGame
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -411,6 +408,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 0bfbf6cdd9ad541f26bedd5e05a1f729
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -430,6 +433,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VideoAdScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
@@ -445,6 +454,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.Monetization.Editor.dll
     namespaceName: UnityEngine.Monetization
     className: Placeholder
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -513,7 +528,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 05b9c96c8ca2ebb9913f64e4d8883190
+      Hash: 653f9ac18f111afa73743b6c951f3c08
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Click
@@ -567,7 +582,7 @@ ScriptsOnlyBuild:
     className: AutoMoneySec
   - hash:
       serializedVersion: 2
-      Hash: 5bcae168539d1cd9e46d05dbf4cdd28f
+      Hash: d635e20c6726104bab100a72dddc6762
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradeManager
@@ -639,7 +654,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: a3c8413597d727c2b723c4774d0fc02a
+      Hash: b9ce5e28fa14304dbe1a69d4a259676c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradePerSec
@@ -693,12 +708,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c5fbd2f768d4f82a8130a0273658ca34
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: VideoAdScript
+    className: GlobalAchievements
   platform: 13
   scenePathNames:
-  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Splash.unity
   - Assets/Scenes/SampleScene.unity
   playerPath: C:/Users/jeanb/Documents/Apk/Company Clicker.apk
