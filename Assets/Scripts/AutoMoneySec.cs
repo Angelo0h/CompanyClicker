@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ public class AutoMoneySec : MonoBehaviour
     public Click click;
     public UpgradePerSec[] items;
 
-    void Start() {
+    void Start()
+    {
         StartCoroutine (AutoTick());
     }
 
@@ -29,6 +31,7 @@ public class AutoMoneySec : MonoBehaviour
 
     public void AutoMoneyPerSec() {
         click.money += GetMoneyPerSec() / 10;
+        click.totalMoney += GetMoneyPerSec() / 10;
     }
 
     IEnumerator AutoTick() {

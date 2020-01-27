@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SplashToGame : MonoBehaviour
 {
+
+    public bool companyIsNamed = false;
     void Start()
     {
         StartCoroutine(ToGame());     
@@ -13,6 +15,13 @@ public class SplashToGame : MonoBehaviour
     IEnumerator ToGame()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (companyIsNamed == false)
+        {
+            SceneManager.LoadScene("CompanyName");
+            companyIsNamed = true;
+        } else 
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

@@ -9,6 +9,7 @@ public class UpgradePerSec : MonoBehaviour
     public GameObject UpgradeButton;
     public GameObject upgradeSecInfo;
     public string upgradeName;
+    public int inicialCost;
     public float cost;
     public int count;
     public int moneySec;

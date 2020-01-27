@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - AutoMoneySec
     - BannerAdScript
     - Click
+    - CompanyLevels
     - CurrencyConverter
     - GlobalAchievements
     - PauseMenu
@@ -24,10 +25,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -79,41 +78,43 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9910}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 9952}
+      Script: {instanceID: 9912}
     - Class: 114
-      Script: {instanceID: 10004}
+      Script: {instanceID: 9954}
     - Class: 114
-      Script: {instanceID: 10362}
+      Script: {instanceID: 10006}
     - Class: 114
-      Script: {instanceID: 10518}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10520}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 10774}
+      Script: {instanceID: 10598}
     - Class: 114
-      Script: {instanceID: 11074}
+      Script: {instanceID: 10736}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 10778}
     - Class: 114
-      Script: {instanceID: 11332}
+      Script: {instanceID: 11078}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11262}
     - Class: 114
-      Script: {instanceID: 11374}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11652}
+      Script: {instanceID: 11356}
+    - Class: 114
+      Script: {instanceID: 11376}
     - Class: 114
       Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11656}
     - Class: 114
-      Script: {instanceID: 11706}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 43060}
+      Script: {instanceID: 11708}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -150,15 +151,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9728}
     - Class: 114
-      Script: {instanceID: 9952}
+      Script: {instanceID: 9954}
     - Class: 114
-      Script: {instanceID: 10226}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 10362}
+      Script: {instanceID: 10364}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 11262}
     - Class: 114
-      Script: {instanceID: 11654}
+      Script: {instanceID: 11656}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -214,6 +215,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RewardedAdsButton
+  - hash:
+      serializedVersion: 2
+      Hash: 02a5ae00f4da5a251589da8622fc7866
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CompanyLevels
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -408,7 +415,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 0bfbf6cdd9ad541f26bedd5e05a1f729
+      Hash: 20029e6a40ab282ba1d8a4ccb15089b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -424,6 +431,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: e001665f00d3f0caaec10b9dffb93ea2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GlobalAchievements
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -528,7 +541,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 653f9ac18f111afa73743b6c951f3c08
+      Hash: 66247ac52f7881b74a8f2f81b3d72f96
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Click
@@ -544,12 +557,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuOptions
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -582,7 +589,7 @@ ScriptsOnlyBuild:
     className: AutoMoneySec
   - hash:
       serializedVersion: 2
-      Hash: d635e20c6726104bab100a72dddc6762
+      Hash: 163784a0d2237671269d7cb7f5b185bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradeManager
@@ -654,7 +661,7 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
-      Hash: b9ce5e28fa14304dbe1a69d4a259676c
+      Hash: 592ededb68ccf1f2ca4ee206b4671f30
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradePerSec
@@ -706,12 +713,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c5fbd2f768d4f82a8130a0273658ca34
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GlobalAchievements
   platform: 13
   scenePathNames:
   - Assets/Scenes/Splash.unity

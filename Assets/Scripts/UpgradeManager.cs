@@ -9,6 +9,7 @@ public class UpgradeManager : MonoBehaviour
     public GameObject UpgradeButton;
     public GameObject upgradeInfo;
     public string upgradeName;
+    public int inicialCost;
     public float cost;
     public int count;
     public int clickPower;

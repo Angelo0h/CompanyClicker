@@ -27,8 +27,14 @@ public class GlobalAchievements : MonoBehaviour
     //Conquista 03
     public GameObject ach03Image;
     public static int ach03Count;
-    public int ach03Trigger = 1000;
+    public int ach03Trigger = 5000;
     public int ach03Code;
+
+    //Conquista 04
+    public GameObject ach04Image;
+    public static float ach04Count;
+    public int ach04Trigger = 1000000000;
+    public int ach04Code;
 
     void Update()
     {
@@ -45,6 +51,10 @@ public class GlobalAchievements : MonoBehaviour
         if (ach03Count == ach03Trigger && ach03Code != 12345)
         {
             StartCoroutine(Trigger03Ach());
+        }
+        if (ach04Count == ach04Trigger && ach04Code != 12345)
+        {
+            StartCoroutine(Trigger04Ach());
         }
         
     }
@@ -92,12 +102,30 @@ public class GlobalAchievements : MonoBehaviour
         achSound.Play();
         ach03Image.SetActive(true);
         achTitle.GetComponent<Text>().text = "CLICOU PRA CARA*&#";
-        achDesc.GetComponent<Text>().text = "clicou 1000, PUT* MERD* CLICOU MUITO!!!!!";
+        achDesc.GetComponent<Text>().text = "clicou 5000, PUT* MERD* CLICOU MUITO!!!!!";
         achNote.SetActive(true);
         yield return new WaitForSeconds(7);
         //Resetando UI
         achNote.SetActive(false);
         ach03Image.SetActive(false);
+        achTitle.GetComponent<Text>().text = "";
+        achDesc.GetComponent<Text>().text = "";
+        achActive = false;
+    }
+
+    IEnumerator Trigger04Ach()
+    {
+        achActive = true;
+        ach04Code = 12345;
+        achSound.Play();
+        ach04Image.SetActive(true);
+        achTitle.GetComponent<Text>().text = "MUITO DINHEIRO";
+        achDesc.GetComponent<Text>().text = "Você alcançou 1 bilhão de dinheiro totalS ºoº";
+        achNote.SetActive(true);
+        yield return new WaitForSeconds(7);
+        //Resetando UI
+        achNote.SetActive(false);
+        ach04Image.SetActive(false);
         achTitle.GetComponent<Text>().text = "";
         achDesc.GetComponent<Text>().text = "";
         achActive = false;

@@ -68,6 +68,7 @@ public class SaveManager : MonoBehaviour
 
         foreach (var item in stats.state)
         {
+            click.totalMoney = stats.totalMoney;
             click.money = stats.money;
             click.moneyPerSec = stats.moneyPerSec;
             click.moneyPerClick = stats.moneyPerClick;
