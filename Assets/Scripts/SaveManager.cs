@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System;
+using UnityEngine.UI;
 
 public class SaveManager : MonoBehaviour
 {
@@ -68,6 +69,7 @@ public class SaveManager : MonoBehaviour
 
         foreach (var item in stats.state)
         {
+            click.CompanyNameDisplay.text = stats.CompanyName;
             click.totalMoney = stats.totalMoney;
             click.money = stats.money;
             click.moneyPerSec = stats.moneyPerSec;

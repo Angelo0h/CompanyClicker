@@ -120,7 +120,7 @@ public class GlobalAchievements : MonoBehaviour
         achSound.Play();
         ach04Image.SetActive(true);
         achTitle.GetComponent<Text>().text = "MUITO DINHEIRO";
-        achDesc.GetComponent<Text>().text = "Você alcançou 1 bilhão de dinheiro totalS ºoº";
+        achDesc.GetComponent<Text>().text = "Você alcançou 1 bilhão de dinheiro total ºoº";
         achNote.SetActive(true);
         yield return new WaitForSeconds(7);
         //Resetando UI

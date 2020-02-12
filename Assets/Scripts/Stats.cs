@@ -12,6 +12,8 @@ public class Stats
     public float coins;
     public int clicks;
 
+    public string CompanyName;
+
     public Block[] state = new Block[12];
 
 }

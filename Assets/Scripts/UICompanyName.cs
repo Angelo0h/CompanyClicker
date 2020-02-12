@@ -7,29 +7,42 @@ using UnityEngine.SceneManagement;
 public class UICompanyName : MonoBehaviour
 {
 
-    public static UICompanyName isntanceUI;
-    public Text CompanyName_field;
+    public static UICompanyName instanceUI;
+    public InputField inputField;
+    public string CompanyName_field;
     public GameObject CompanyName;
-    public GameObject Ui;
     
 
     public void toGame()
     {
+        PlayerPrefs.SetString ("CompanyName", CompanyName_field);
         DontDestroyOnLoad(CompanyName);
-        DontDestroyOnLoad(Ui);
         SceneManager.LoadScene("SampleScene");
     }
 
     void Awake ()
     {
-        if (isntanceUI == null)
+        if (instanceUI == null)
         {
-            isntanceUI = this;
-        } else if (isntanceUI != this)
+            instanceUI = this;
+        } else if (instanceUI != this)
         {
             Destroy(gameObject);
         }
         
+    }
+    
+    /*void Start()
+    {
+        CompanyNamed = true;
+    }*/
+
+    void Update()
+    {
+        if (CompanyName_field != inputField.text)
+        {
+            CompanyName_field = inputField.text;
+        }
     }
 
 

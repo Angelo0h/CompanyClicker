@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
         UpgradeManager[] upgradeManagers = GameObject.FindObjectsOfType<UpgradeManager>();
         AutoMoneySec autoMoneySec = GameObject.FindObjectOfType<AutoMoneySec>();
 
+        player.myStats.CompanyName = click.CompanyNameDisplay.text;
         player.myStats.totalMoney = float.Parse(click.totalMoney.ToString());
         player.myStats.money = float.Parse(click.money.ToString());
         player.myStats.moneyPerClick = int.Parse(click.moneyPerClick.ToString());

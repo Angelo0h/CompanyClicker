@@ -17,7 +17,7 @@ public class Click : MonoBehaviour
 
     void Awake()
     {
-        CompanyNameDisplay.text = UICompanyName.isntanceUI.CompanyName_field.ToString();
+        CompanyNameDisplay.text = PlayerPrefs.GetString ("CompanyName");
     }
 
     void Update()
@@ -34,6 +34,11 @@ public class Click : MonoBehaviour
         GlobalAchievements.ach01Count = clicks;
         GlobalAchievements.ach02Count = clicks;
         GlobalAchievements.ach03Count = clicks;
+    }
+
+    public void FoiTudoProSaco()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     

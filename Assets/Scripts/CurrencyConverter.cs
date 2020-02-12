@@ -26,9 +26,9 @@ public class CurrencyConverter : MonoBehaviour
         if (valueToConvert >= 1000000000) {
             converted = (valueToConvert / 1000000000f).ToString("f3") + " Bi";
         } else if (valueToConvert >= 1000000) {
-            converted = (valueToConvert / 1000000f).ToString("f3") + " Mil";
+            converted = (valueToConvert / 1000000f).ToString("f3") + " Mi";
         } else if (valueToConvert >= 1000) {
-            converted = (valueToConvert / 1000f).ToString("f3") + " Mi";
+            converted = (valueToConvert / 1000f).ToString("f3") + " Mil";
         } else {
             converted = "" + valueToConvert;
         }
